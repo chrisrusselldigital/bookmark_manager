@@ -6,9 +6,9 @@ class Bookmark
                    PG.connect(dbname: 'bookmark_manager_test')
                  else
                    PG.connect(dbname: 'bookmark_manager')
-               end
+                 end
 
     result = connection.exec('SELECT * FROM bookmarks')
-    result.map { |bookmark| bookmark['url'] }
+    result.map { |link| link['url'] }
   end
 end
