@@ -6,6 +6,6 @@ feature 'adding bookmarks' do
     fill_in('url', with: 'http://chris.com')
     click_button 'Submit'
     save_and_open_page
-    expect(page).to have_content "http://chris.com has been added"
+    expect(page).to have_content("http://chris.com has been added")
   end
 end
